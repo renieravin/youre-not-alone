@@ -1,0 +1,112 @@
+{
+  "name": "yna",
+  "displayName": "You're Not Alone",
+  "description": "VS Code extension that connects developers through real-time check-ins",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onView:ynaCheckinView",
+    "onStartupFinished"
+  ],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "yna.checkIn",
+        "title": "You're Not Alone: Check In"
+      },
+      {
+        "command": "yna.logout",
+        "title": "You're Not Alone: Logout"
+      },
+      {
+        "command": "yna.openCheckInView",
+        "title": "You're Not Alone: Open Check-in View"
+      },
+      {
+        "command": "yna.checkInView.focus",
+        "title": "View: Show You're Not Alone"
+      }
+    ],
+    "menus": {
+      "commandPalette": [
+        {
+          "command": "yna.checkInView.focus",
+          "when": "false"
+        }
+      ]
+    },
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "yna-sidebar",
+          "title": "You're Not Alone",
+          "icon": "resources/icon.png"
+        }
+      ]
+    },
+    "views": {
+      "yna-sidebar": [
+        {
+          "type": "webview",
+          "id": "yna.checkInView",
+          "name": "You're Not Alone",
+          "icon": "resources/icon.png",
+          "contextualTitle": "You're Not Alone"
+        }
+      ]
+    },
+    "keybindings": [
+      {
+        "command": "yna.checkInView.focus",
+        "key": ""
+      }
+    ],
+    "configuration": {
+      "title": "You're Not Alone",
+      "properties": {
+        "yna.panelWidth": {
+          "type": "number",
+          "default": 300,
+          "minimum": 200,
+          "maximum": 800,
+          "description": "Width of the check-ins panel in pixels"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run package",
+    "compile": "webpack",
+    "watch": "webpack --watch",
+    "package": "webpack --mode production --devtool hidden-source-map",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20250414.0",
+    "@types/crypto-js": "^4.2.2",
+    "@types/node": "^16.11.7",
+    "@types/node-fetch": "^2.6.4",
+    "@types/vscode": "^1.74.0",
+    "@types/ws": "^8.5.5",
+    "crypto-js": "^4.2.0",
+    "ts-loader": "^9.4.2",
+    "typescript": "^5.2.2",
+    "webpack": "^5.81.0",
+    "webpack-cli": "^5.0.2"
+  },
+  "dependencies": {
+    "node-fetch": "^2.6.7",
+    "ws": "^8.14.2"
+  },
+  "optionalDependencies": {
+    "bufferutil": "^4.0.9",
+    "utf-8-validate": "^6.0.5"
+  }
+}

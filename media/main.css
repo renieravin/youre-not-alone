@@ -1,0 +1,39 @@
+body {
+    padding: 0;
+}
+
+.avatar {
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.avatar:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+}
+
+.check-in {
+    transition: background-color 0.2s;
+}
+
+.check-in:hover {
+    background-color: var(--vscode-list-hoverBackground);
+}
+
+.username {
+    color: var(--vscode-editor-foreground);
+}
+
+/* Customize the avatar size here */
+.avatar {
+    width: 48px !important;  /* Triple the standard size */
+    height: 48px !important; /* Triple the standard size */
+}
+
+/* For larger displays, make avatars even bigger */
+@media (min-width: 600px) {
+    .avatar {
+        width: 64px !important;
+        height: 64px !important;
+    }
+} 
