@@ -4,6 +4,7 @@
   "description": "VS Code extension that connects developers through real-time check-ins",
   "version": "0.0.1",
   "publisher": "renieravin",
+  "icon": "resources/icon-color.png",
   "repository": {
     "type": "git",
     "url": "https://github.com/renieravin/youre-not-alone.git"
