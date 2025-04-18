@@ -3,6 +3,16 @@
   "displayName": "You're Not Alone",
   "description": "VS Code extension that connects developers through real-time check-ins",
   "version": "0.0.1",
+  "publisher": "renieravin",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/renieravin/youre-not-alone.git"
+  },
+  "files": [
+    "dist/**",
+    "resources/**",
+    "LICENSE"
+  ],
   "engines": {
     "vscode": "^1.74.0"
   },
@@ -96,6 +106,7 @@
     "@types/vscode": "^1.74.0",
     "@types/ws": "^8.5.5",
     "crypto-js": "^4.2.0",
+    "terser-webpack-plugin": "^5.3.14",
     "ts-loader": "^9.4.2",
     "typescript": "^5.2.2",
     "webpack": "^5.81.0",
