@@ -2,7 +2,7 @@
   "name": "youre-not-alone",
   "displayName": "You're Not Alone",
   "description": "VS Code extension that connects developers through real-time check-ins",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "publisher": "renieravin",
   "icon": "resources/icon-color.png",
   "repository": {
